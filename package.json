@@ -1,0 +1,26 @@
+{
+  "name": "sitegen-e2e-tests",
+  "version": "1.0.0",
+  "description": "Sets of checkout tests for the SiteGenesys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zxspec/sitegen-e2e-tests.git"
+  },
+  "keywords": [
+    "cypress.io",
+    "sfcc"
+  ],
+  "author": "Dmitriy Ievlev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zxspec/sitegen-e2e-tests/issues"
+  },
+  "homepage": "https://github.com/zxspec/sitegen-e2e-tests#readme",
+  "dependencies": {
+    "cypress": "^1.1.4"
+  }
+}
