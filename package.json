@@ -4,7 +4,8 @@
   "description": "Sets of checkout tests for the SiteGenesys",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_spec.js",
+    "cypress": "./node_modules/.bin/cypress open"
   },
   "repository": {
     "type": "git",
