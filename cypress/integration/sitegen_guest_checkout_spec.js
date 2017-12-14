@@ -13,27 +13,27 @@ describe('Guest checkout', function(){
 
     // *** CHECKOUT STEP 2 - Shipping ***
     // Shipping Address
-    cy.get('[name$=_firstName]').type('Test');
-    cy.get('[name$=_lastName]').type('Testoff');
-    cy.get('[name$=_address1]').type('1 main str');
-    cy.get('[name$=_city]').type('San Jose');
-    cy.get('[name$=_postal]').type('95136');
+    cy.get('[name$=_firstName]').clear().type('Test');
+    cy.get('[name$=_lastName]').clear().type('Testoff');
+    cy.get('[name$=_address1]').clear().type('1 main str');
+    cy.get('[name$=_city]').clear().type('San Jose');
+    cy.get('[name$=_postal]').clear().type('95136');
     cy.get('[name$=_states_state]').select('CA');
-    cy.get('[name$=_phone]').type('555-555-5555');
+    cy.get('[name$=_phone]').clear().type('555-555-5555');
         
     cy.get('form[id$=_shippingAddress] button[type=submit]').should('not.be.disabled').click();
     
     // *** CHECKOUT STEP 3 ***
     // Billing Address
-    cy.get('[name$=_firstName]').type('John');
-    cy.get('[name$=_lastName]').type('Doe');
-    cy.get('[name$=_address1]').type('1 Market St');
-    cy.get('[name$=_address2]').type('Suite 300');
-    cy.get('[name$=_city]').type('San Francisco');
-    cy.get('[name$=_postal]').type('94105');
+    cy.get('[name$=_firstName]').clear().type('John');
+    cy.get('[name$=_lastName]').clear().type('Doe');
+    cy.get('[name$=_address1]').clear().type('1 Market St');
+    cy.get('[name$=_address2]').clear().type('Suite 300');
+    cy.get('[name$=_city]').clear().type('San Francisco');
+    cy.get('[name$=_postal]').clear().type('94105');
     cy.get('[name$=_states_state]').select('CA');
-    cy.get('[name$=_phone]').type('415-901-7000');
-    cy.get('[name$=_emailAddress]').type('user@example.com');
+    cy.get('[name$=_phone]').clear().type('415-901-7000');
+    cy.get('[name$=_emailAddress]').clear().type('user@example.com');
     
     // CC-fields
     cy.get('[name$=_creditCard_owner]').type('Test Testoff');

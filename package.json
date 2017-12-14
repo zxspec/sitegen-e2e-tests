@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_spec.js",
+    "test-mobile": "./node_modules/.bin/cypress open --config viewportWidth=375,viewportHeight=667",
+    "test-secureless": "./node_modules/.bin/cypress open --config chromeWebSecurity=false",
     "cypress": "./node_modules/.bin/cypress open"
   },
   "repository": {
@@ -23,5 +25,8 @@
   "homepage": "https://github.com/zxspec/sitegen-e2e-tests#readme",
   "dependencies": {
     "cypress": "^1.1.4"
+  },
+  "devDependencies": {
+    "eslint-plugin-cypress": "^2.0.1"
   }
 }
