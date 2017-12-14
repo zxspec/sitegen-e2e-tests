@@ -4,7 +4,7 @@
   "description": "Sets of checkout tests for the SiteGenesys",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_spec.js",
+    "test": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_guest_checkout_spec.js",
     "test-mobile": "./node_modules/.bin/cypress open --config viewportWidth=375,viewportHeight=667",
     "test-secureless": "./node_modules/.bin/cypress open --config chromeWebSecurity=false",
     "cypress": "./node_modules/.bin/cypress open"
