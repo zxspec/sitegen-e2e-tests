@@ -7,6 +7,8 @@
     "test": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_guest_checkout_spec.js",
     "test-mobile": "./node_modules/.bin/cypress open --config viewportWidth=375,viewportHeight=667",
     "test-secureless": "./node_modules/.bin/cypress open --config chromeWebSecurity=false",
+    "co-guest": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_guest_checkout_spec.js",
+    "co-registered": "./node_modules/.bin/cypress run --spec cypress/integration/sitegen_registered_checkout_spec.js",
     "cypress": "./node_modules/.bin/cypress open"
   },
   "repository": {
@@ -27,6 +29,7 @@
     "cypress": "^1.1.4"
   },
   "devDependencies": {
+    "cypress": "^1.4.1",
     "eslint-plugin-cypress": "^2.0.1"
   }
 }
