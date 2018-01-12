@@ -1,4 +1,5 @@
 const defaultPdpUrl = 'https://sitegenesis.demandware.net/640188017003.html';
+
 Cypress.Commands.add('openPDP', (url = defaultPdpUrl) => {
     cy.visit(url);
     cy.get('#add-to-cart').click();
@@ -8,6 +9,13 @@ Cypress.Commands.add('openPDP', (url = defaultPdpUrl) => {
 Cypress.Commands.add('startGuestCheckout', () => {      
     cy.get('form#checkout-form button[name$=_checkoutCart]:first').click();
     cy.get('button[name$=_unregistered]').click();
+});
+
+Cypress.Commands.add('startRegisteredCustomerCheckout', () => {      
+    cy.get('form#checkout-form button[name$=_checkoutCart]:first').click();
+    cy.get('[name*=_login_username]').clear().type('ievlevdmitriy@gmail.com');
+    cy.get('[name*=_login_password]').clear().type('ievlevdmitriy@gmail.com');
+    cy.get('button[type=submit][name$=_login]').click();
 });
 
 Cypress.Commands.add('addShippingAddress', () => {
